@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Tests\Unit;
+namespace JonMierke\PaperLink\Tests\Unit;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use JonMierke\RequestAnalytics\Models\RequestAnalytics;
-use JonMierke\RequestAnalytics\Services\AnalyticsService;
-use JonMierke\RequestAnalytics\Tests\TestCase;
+use JonMierke\PaperLink\Models\PaperLink;
+use JonMierke\PaperLink\Services\AnalyticsService;
+use JonMierke\PaperLink\Tests\TestCase;
 use PHPUnit\Framework\Attributes\Test;
 
 class AnalyticsServiceTest extends TestCase

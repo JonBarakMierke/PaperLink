@@ -1,11 +1,11 @@
 <?php
 
-namespace JonMierke\RequestAnalytics\Services;
+namespace JonMierke\PaperLink\Services;
 
 use Illuminate\Support\Facades\Auth;
-use JonMierke\RequestAnalytics\DTO\RequestDataDTO;
-use JonMierke\RequestAnalytics\Exceptions\RequestAnalyticsStorageException;
-use JonMierke\RequestAnalytics\Models\RequestAnalytics;
+use JonMierke\PaperLink\DTO\RequestDataDTO;
+use JonMierke\PaperLink\Exceptions\PaperLinkStorageException;
+use JonMierke\PaperLink\Models\PaperLink;
 
 class RequestAnalyticsService
 {

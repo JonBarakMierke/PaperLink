@@ -1,10 +1,10 @@
 {
-    "name": "jon-mierke/laravel-request-analytics",
-    "description": "Simple request data analytics package for Laravel projects",
+    "name": "jon-mierke/paperlink",
+    "description": "Request anayltics, trackable links, qr code generator",
     "keywords": [
         "jon-mierke",
         "laravel",
-        "laravel-request-analytics"
+        "paperlink"
     ],
     "homepage": "https://github.com/JonBarakMierke/laravel-request-analytics",
     "license": "MIT",
@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "JonMierke\\RequestAnalytics\\": "src/",
-            "JonMierke\\RequestAnalytics\\Database\\Factories\\": "database/factories/"
+            "JonMierke\\PaperLink\\": "src/",
+            "JonMierke\\PaperLink\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "JonMierke\\RequestAnalytics\\Tests\\": "tests/",
+            "JonMierke\\PaperLink\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -65,7 +65,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "JonMierke\\RequestAnalytics\\RequestAnalyticsServiceProvider"
+                "JonMierke\\PaperLink\\PaperLinkServiceProvider"
             ]
         }
     },

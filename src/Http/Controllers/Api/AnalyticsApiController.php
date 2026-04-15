@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Http\Controllers\Api;
+namespace JonMierke\PaperLink\Http\Controllers\Api;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Cache;
-use JonMierke\RequestAnalytics\Http\Requests\OverviewRequest;
-use JonMierke\RequestAnalytics\Http\Requests\PageViewsRequest;
-use JonMierke\RequestAnalytics\Http\Requests\VisitorsRequest;
-use JonMierke\RequestAnalytics\Services\AnalyticsService;
+use JonMierke\PaperLink\Http\Requests\OverviewRequest;
+use JonMierke\PaperLink\Http\Requests\PageViewsRequest;
+use JonMierke\PaperLink\Http\Requests\VisitorsRequest;
+use JonMierke\PaperLink\Services\AnalyticsService;
 
 class AnalyticsApiController extends BaseController
 {

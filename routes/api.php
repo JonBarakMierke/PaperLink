@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use JonMierke\RequestAnalytics\Http\Controllers\Api\AnalyticsApiController;
+use JonMierke\PaperLink\Http\Controllers\Api\AnalyticsApiController;
 
 Route::middleware(config('request-analytics.middleware.api'))
     ->prefix('api/v1/analytics')

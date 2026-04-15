@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Tests\Feature\Web;
+namespace JonMierke\PaperLink\Tests\Feature\Web;
 
-use JonMierke\RequestAnalytics\Models\RequestAnalytics;
-use JonMierke\RequestAnalytics\Tests\Feature\BaseFeatureTestCase;
+use JonMierke\PaperLink\Models\PaperLink;
+use JonMierke\PaperLink\Tests\Feature\BaseFeatureTestCase;
 use PHPUnit\Framework\Attributes\Test;
 
 class DashboardTest extends BaseFeatureTestCase

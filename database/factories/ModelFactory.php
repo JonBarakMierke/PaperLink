@@ -1,6 +1,6 @@
 <?php
 
-namespace JonMierke\RequestAnalytics\Database\Factories;
+namespace JonMierke\PaperLink\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

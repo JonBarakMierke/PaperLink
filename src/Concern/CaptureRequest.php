@@ -1,12 +1,12 @@
 <?php
 
-namespace JonMierke\RequestAnalytics\Concern;
+namespace JonMierke\PaperLink\Concern;
 
 use Illuminate\Http\Request;
-use JonMierke\RequestAnalytics\DTO\RequestDataDTO;
-use JonMierke\RequestAnalytics\Services\BotDetectionService;
-use JonMierke\RequestAnalytics\Services\GeolocationService;
-use JonMierke\RequestAnalytics\Services\VisitorTrackingService;
+use JonMierke\PaperLink\DTO\RequestDataDTO;
+use JonMierke\PaperLink\Services\BotDetectionService;
+use JonMierke\PaperLink\Services\GeolocationService;
+use JonMierke\PaperLink\Services\VisitorTrackingService;
 use Symfony\Component\HttpFoundation\IpUtils;
 use Symfony\Component\HttpFoundation\Response;
 

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Tests\Unit;
+namespace JonMierke\PaperLink\Tests\Unit;
 
-use JonMierke\RequestAnalytics\DTO\RequestDataDTO;
-use JonMierke\RequestAnalytics\Tests\TestCase;
+use JonMierke\PaperLink\DTO\RequestDataDTO;
+use JonMierke\PaperLink\Tests\TestCase;
 use PHPUnit\Framework\Attributes\Test;
 
 class RequestDataDTOTest extends TestCase

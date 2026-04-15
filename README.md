@@ -189,7 +189,7 @@ php artisan vendor:publish --tag="request-analytics-assets"
 php artisan vendor:publish --tag="request-analytics-views"
 
 # Or publish everything at once
-php artisan vendor:publish --provider="JonMierke\RequestAnalytics\RequestAnalyticsServiceProvider"
+php artisan vendor:publish --provider="JonMierke\PaperLink\PaperLinkServiceProvider"
 ```
 
 ### Automated Data Pruning
@@ -203,7 +203,7 @@ Add to `routes/console.php`:
 use Illuminate\Support\Facades\Schedule;
 
 Schedule::command('model:prune', [
-    '--model' => 'JonMierke\RequestAnalytics\Models\RequestAnalytics',
+    '--model' => 'JonMierke\PaperLink\Models\PaperLink',
 ])->monthly();
 ```
 
@@ -213,7 +213,7 @@ use Illuminate\Console\Scheduling\Schedule;
 
 ->withSchedule(function (Schedule $schedule) {
     $schedule->command('model:prune', [
-        '--model' => 'JonMierke\RequestAnalytics\Models\RequestAnalytics',
+        '--model' => 'JonMierke\PaperLink\Models\PaperLink',
     ])->monthly();
 })
 ```
@@ -225,7 +225,7 @@ Add to `app/Console/Kernel.php`:
 protected function schedule(Schedule $schedule): void
 {
     $schedule->command('model:prune', [
-        '--model' => 'JonMierke\RequestAnalytics\Models\RequestAnalytics',
+        '--model' => 'JonMierke\PaperLink\Models\PaperLink',
     ])->monthly();
 }
 ```
@@ -276,7 +276,7 @@ php artisan request-analytics:install
 php artisan list | grep analytics
 
 # Clear old analytics data (if pruning is enabled)
-php artisan model:prune --model="JonMierke\RequestAnalytics\Models\RequestAnalytics"
+php artisan model:prune --model="JonMierke\PaperLink\Models\PaperLink"
 ```
 
 ## Configuration Options
@@ -379,7 +379,7 @@ Implement the `CanAccessAnalyticsDashboard` interface in your User model to cont
 namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use JonMierke\RequestAnalytics\Contracts\CanAccessAnalyticsDashboard;
+use JonMierke\PaperLink\Contracts\CanAccessAnalyticsDashboard;
 
 class User extends Authenticatable implements CanAccessAnalyticsDashboard
 {
