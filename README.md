@@ -1,19 +1,26 @@
-# Laravel Request Analytics
+# PaperLink
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/me-shaon/laravel-request-analytics.svg?style=flat-square)](https://packagist.org/packages/me-shaon/laravel-request-analytics)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/me-shaon/laravel-request-analytics/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/me-shaon/laravel-request-analytics/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/me-shaon/laravel-request-analytics/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/me-shaon/laravel-request-analytics/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/me-shaon/laravel-request-analytics.svg?style=flat-square)](https://packagist.org/packages/me-shaon/laravel-request-analytics)
-
-![Laravel request analytics](https://github.com/me-shaon/laravel-request-analytics/blob/main/banner_preview.png?raw=true)
+![PaperLink](https://pubplus-general-s3-bucket.s3.us-east-2.amazonaws.com/pubplus-assets/logos/paperlink-temp-logo.png)
 
 ## Overview
 
-Laravel Request Analytics is a comprehensive web analytics solution designed specifically for Laravel applications. It allows you to track traffic, understand your audience, and monitor performance through a clean dashboard, without sending data to third parties.
+PaperLink Handles:
+
+** Core Services
+- Link generation
+- Redirection handling
+- Analytics capture
+- Reporting logic
+- GEO Data
+- UTM Parsing
+
+** Core Models
+- PaperLink
+- Campaign
+- AnalyticsRecord
 
 ## What You Get
 
-- **Instant dashboard**: Real-time page views, visitors, bounce rate, and session duration
 - **Traffic & behavior insights**: Clear view of user interactions, traffic patterns, and performance metrics
 - **Privacy-first**: GDPR-friendly, IP anonymization, retention control, no third-party sharing
 - **Smart bot filtering**: Automatically excludes crawlers, bots, and monitoring tools
