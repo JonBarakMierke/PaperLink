@@ -11,30 +11,10 @@ return new class extends Migration
         $tableName = config('request-analytics.database.table', 'request_analytics');
         $connection = config('request-analytics.database.connection');
 
-        if (! Schema::connection($connection)->hasTable($tableName)) {
-            Schema::connection($connection)->create($tableName, function (Blueprint $table) {
-                $table->id();
-                $table->string('path');
-                $table->string('page_title')->nullable();
-                $table->string('ip_address');
-                $table->string('operating_system')->nullable();
-                $table->string('browser')->nullable();
-                $table->string('device')->nullable();
-                $table->string('screen')->nullable();
-                $table->string('referrer')->nullable();
-                $table->string('country')->nullable();
-                $table->string('city')->nullable();
-                $table->string('language')->nullable();
-                $table->text('query_params')->nullable();
-                $table->string('session_id');
-                $table->string('visitor_id')->nullable();
-                $table->unsignedBigInteger('user_id')->nullable();
-                $table->string('http_method');
-                $table->string('request_category');
-                $table->bigInteger('response_time')->nullable();
-                $table->timestamp('visited_at');
-            });
-        }
+        Schema::connection($connection)->table($tableName, function (Blueprint $table) {
+            $table->unsignedBigInteger('customer_id')->nullable()->index();
+            $table->unsignedBigInteger('paperlink_id')->nullable()->index();
+        });
     }
 
     public function down()
@@ -42,6 +22,8 @@ return new class extends Migration
         $tableName = config('request-analytics.database.table', 'request_analytics');
         $connection = config('request-analytics.database.connection');
 
-        Schema::connection($connection)->dropIfExists($tableName);
+        Schema::connection($connection)->table($tableName, function (Blueprint $table) {
+            $table->dropColumn(['customer_id', 'paperlink_id']);
+        });
     }
 };

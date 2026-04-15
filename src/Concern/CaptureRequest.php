@@ -80,7 +80,9 @@ trait CaptureRequest
             $responseTime,
             $requestCategory,
             $sessionId,
-            $visitorId
+            $visitorId,
+            $request->get('paperlink_id'),
+            $request->get('customer_id'),
         );
     }
 

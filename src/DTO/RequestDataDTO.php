@@ -20,6 +20,8 @@ class RequestDataDTO
         public float $responseTime,
         public string $requestCategory,
         public string $sessionId = '',
-        public string $visitorId = ''
+        public string $visitorId = '',
+        public ?int $customerId = null,
+        public ?int $paperlinkId = null,
     ) {}
 }
