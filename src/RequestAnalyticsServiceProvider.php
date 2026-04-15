@@ -20,7 +20,7 @@ class RequestAnalyticsServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasRoutes(['web', 'api'])
             ->hasAssets()
-            ->hasMigrations(['create_request_analytics_table', 'add_indexes_to_request_analytics_table'])
+            ->hasMigrations(['create_request_analytics_table', 'add_indexes_to_request_analytics_table', 'add_to_request_analytics_table'])
             ->hasInstallCommand(function (InstallCommand $command): void {
                 $command
                     ->startWith(function (InstallCommand $command): void {
@@ -35,8 +35,7 @@ class RequestAnalyticsServiceProvider extends PackageServiceProvider
                         $command->info('Laravel Request Analytics has been installed successfully!');
                         $command->info('You can now visit /analytics to view your dashboard.');
                         $command->info('Check the documentation for configuration options.');
-                    })
-                    ->askToStarRepoOnGitHub('me-shaon/laravel-request-analytics');
+                    });
             });
     }
 
