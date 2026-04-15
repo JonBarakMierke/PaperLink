@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Http\Middleware;
+namespace JonMierke\RequestAnalytics\Http\Middleware;
 
 use Closure;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use MeShaon\RequestAnalytics\Concern\CaptureRequest;
-use MeShaon\RequestAnalytics\DTO\RequestDataDTO;
-use MeShaon\RequestAnalytics\Jobs\ProcessData;
+use JonMierke\RequestAnalytics\Concern\CaptureRequest;
+use JonMierke\RequestAnalytics\DTO\RequestDataDTO;
+use JonMierke\RequestAnalytics\Jobs\ProcessData;
 use Symfony\Component\HttpFoundation\Response;
 
 class APIRequestCapture

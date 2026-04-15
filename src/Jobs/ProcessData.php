@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Jobs;
+namespace JonMierke\RequestAnalytics\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use MeShaon\RequestAnalytics\DTO\RequestDataDTO;
-use MeShaon\RequestAnalytics\Services\RequestAnalyticsService;
+use JonMierke\RequestAnalytics\DTO\RequestDataDTO;
+use JonMierke\RequestAnalytics\Services\RequestAnalyticsService;
 
 class ProcessData implements ShouldQueue
 {

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Services;
+namespace JonMierke\RequestAnalytics\Services;
 
 use Carbon\CarbonInterval;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
-use MeShaon\RequestAnalytics\Models\RequestAnalytics;
+use JonMierke\RequestAnalytics\Models\RequestAnalytics;
 
 class AnalyticsService
 {

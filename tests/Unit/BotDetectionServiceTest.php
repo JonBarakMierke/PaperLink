@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Tests\Unit;
+namespace JonMierke\RequestAnalytics\Tests\Unit;
 
-use MeShaon\RequestAnalytics\Exceptions\BotDetectionException;
-use MeShaon\RequestAnalytics\Services\BotDetectionService;
-use MeShaon\RequestAnalytics\Tests\TestCase;
+use JonMierke\RequestAnalytics\Exceptions\BotDetectionException;
+use JonMierke\RequestAnalytics\Services\BotDetectionService;
+use JonMierke\RequestAnalytics\Tests\TestCase;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 

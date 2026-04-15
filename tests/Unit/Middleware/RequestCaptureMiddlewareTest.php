@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Tests\Unit\Middleware;
+namespace JonMierke\RequestAnalytics\Tests\Unit\Middleware;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Queue;
-use MeShaon\RequestAnalytics\Http\Middleware\APIRequestCapture;
-use MeShaon\RequestAnalytics\Http\Middleware\WebRequestCapture;
-use MeShaon\RequestAnalytics\Jobs\ProcessData;
-use MeShaon\RequestAnalytics\Tests\TestCase;
+use JonMierke\RequestAnalytics\Http\Middleware\APIRequestCapture;
+use JonMierke\RequestAnalytics\Http\Middleware\WebRequestCapture;
+use JonMierke\RequestAnalytics\Jobs\ProcessData;
+use JonMierke\RequestAnalytics\Tests\TestCase;
 use PHPUnit\Framework\Attributes\Test;
 
 class RequestCaptureMiddlewareTest extends TestCase

@@ -1,6 +1,6 @@
 <?php
 
-namespace MeShaon\RequestAnalytics\Services;
+namespace JonMierke\RequestAnalytics\Services;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;

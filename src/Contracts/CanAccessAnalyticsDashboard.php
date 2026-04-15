@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Contracts;
+namespace JonMierke\RequestAnalytics\Contracts;
 
 interface CanAccessAnalyticsDashboard
 {

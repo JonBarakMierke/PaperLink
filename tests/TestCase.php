@@ -1,13 +1,13 @@
 <?php
 
-namespace MeShaon\RequestAnalytics\Tests;
+namespace JonMierke\RequestAnalytics\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Testing\TestResponse;
-use MeShaon\RequestAnalytics\RequestAnalyticsServiceProvider;
+use JonMierke\RequestAnalytics\RequestAnalyticsServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -26,7 +26,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName): string => 'MeShaon\\RequestAnalytics\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName): string => 'JonMierke\\RequestAnalytics\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
 
         // Ensure the table is created

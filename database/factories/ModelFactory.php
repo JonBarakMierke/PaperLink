@@ -1,6 +1,6 @@
 <?php
 
-namespace MeShaon\RequestAnalytics\Database\Factories;
+namespace JonMierke\RequestAnalytics\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Tests\Feature\Web;
+namespace JonMierke\RequestAnalytics\Tests\Feature\Web;
 
-use MeShaon\RequestAnalytics\Models\RequestAnalytics;
-use MeShaon\RequestAnalytics\Tests\Feature\BaseFeatureTestCase;
+use JonMierke\RequestAnalytics\Models\RequestAnalytics;
+use JonMierke\RequestAnalytics\Tests\Feature\BaseFeatureTestCase;
 use PHPUnit\Framework\Attributes\Test;
 
 class DashboardTest extends BaseFeatureTestCase

@@ -182,7 +182,7 @@ php artisan vendor:publish --tag="request-analytics-assets"
 php artisan vendor:publish --tag="request-analytics-views"
 
 # Or publish everything at once
-php artisan vendor:publish --provider="MeShaon\RequestAnalytics\RequestAnalyticsServiceProvider"
+php artisan vendor:publish --provider="JonMierke\RequestAnalytics\RequestAnalyticsServiceProvider"
 ```
 
 ### Automated Data Pruning
@@ -196,7 +196,7 @@ Add to `routes/console.php`:
 use Illuminate\Support\Facades\Schedule;
 
 Schedule::command('model:prune', [
-    '--model' => 'MeShaon\RequestAnalytics\Models\RequestAnalytics',
+    '--model' => 'JonMierke\RequestAnalytics\Models\RequestAnalytics',
 ])->monthly();
 ```
 
@@ -206,7 +206,7 @@ use Illuminate\Console\Scheduling\Schedule;
 
 ->withSchedule(function (Schedule $schedule) {
     $schedule->command('model:prune', [
-        '--model' => 'MeShaon\RequestAnalytics\Models\RequestAnalytics',
+        '--model' => 'JonMierke\RequestAnalytics\Models\RequestAnalytics',
     ])->monthly();
 })
 ```
@@ -218,7 +218,7 @@ Add to `app/Console/Kernel.php`:
 protected function schedule(Schedule $schedule): void
 {
     $schedule->command('model:prune', [
-        '--model' => 'MeShaon\RequestAnalytics\Models\RequestAnalytics',
+        '--model' => 'JonMierke\RequestAnalytics\Models\RequestAnalytics',
     ])->monthly();
 }
 ```
@@ -269,7 +269,7 @@ php artisan request-analytics:install
 php artisan list | grep analytics
 
 # Clear old analytics data (if pruning is enabled)
-php artisan model:prune --model="MeShaon\RequestAnalytics\Models\RequestAnalytics"
+php artisan model:prune --model="JonMierke\RequestAnalytics\Models\RequestAnalytics"
 ```
 
 ## Configuration Options
@@ -372,7 +372,7 @@ Implement the `CanAccessAnalyticsDashboard` interface in your User model to cont
 namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use MeShaon\RequestAnalytics\Contracts\CanAccessAnalyticsDashboard;
+use JonMierke\RequestAnalytics\Contracts\CanAccessAnalyticsDashboard;
 
 class User extends Authenticatable implements CanAccessAnalyticsDashboard
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace MeShaon\RequestAnalytics\Services;
+namespace JonMierke\RequestAnalytics\Services;
 
 use Illuminate\Support\Facades\Auth;
-use MeShaon\RequestAnalytics\DTO\RequestDataDTO;
-use MeShaon\RequestAnalytics\Exceptions\RequestAnalyticsStorageException;
-use MeShaon\RequestAnalytics\Models\RequestAnalytics;
+use JonMierke\RequestAnalytics\DTO\RequestDataDTO;
+use JonMierke\RequestAnalytics\Exceptions\RequestAnalyticsStorageException;
+use JonMierke\RequestAnalytics\Models\RequestAnalytics;
 
 class RequestAnalyticsService
 {

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Tests\Unit\Traits;
+namespace JonMierke\RequestAnalytics\Tests\Unit\Traits;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use MeShaon\RequestAnalytics\Concern\CaptureRequest;
-use MeShaon\RequestAnalytics\DTO\RequestDataDTO;
-use MeShaon\RequestAnalytics\Tests\TestCase;
+use JonMierke\RequestAnalytics\Concern\CaptureRequest;
+use JonMierke\RequestAnalytics\DTO\RequestDataDTO;
+use JonMierke\RequestAnalytics\Tests\TestCase;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 

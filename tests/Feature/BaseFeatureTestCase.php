@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Tests\Feature;
+namespace JonMierke\RequestAnalytics\Tests\Feature;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Cache;
-use MeShaon\RequestAnalytics\Contracts\CanAccessAnalyticsDashboard;
-use MeShaon\RequestAnalytics\Tests\TestCase;
+use JonMierke\RequestAnalytics\Contracts\CanAccessAnalyticsDashboard;
+use JonMierke\RequestAnalytics\Tests\TestCase;
 use Mockery;
 
 class BaseFeatureTestCase extends TestCase

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Exceptions;
+namespace JonMierke\RequestAnalytics\Exceptions;
 
 /**
  * Base exception class for geolocation-related errors

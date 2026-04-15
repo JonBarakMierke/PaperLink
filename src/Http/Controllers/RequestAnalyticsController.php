@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Http\Controllers;
+namespace JonMierke\RequestAnalytics\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
-use MeShaon\RequestAnalytics\Services\DashboardAnalyticsService;
+use JonMierke\RequestAnalytics\Services\DashboardAnalyticsService;
 
 class RequestAnalyticsController extends BaseController
 {

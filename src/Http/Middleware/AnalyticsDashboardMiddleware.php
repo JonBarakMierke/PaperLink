@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Http\Middleware;
+namespace JonMierke\RequestAnalytics\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use MeShaon\RequestAnalytics\Contracts\CanAccessAnalyticsDashboard;
+use JonMierke\RequestAnalytics\Contracts\CanAccessAnalyticsDashboard;
 
 class AnalyticsDashboardMiddleware
 {

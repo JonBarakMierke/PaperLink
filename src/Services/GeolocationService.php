@@ -1,15 +1,15 @@
 <?php
 
-namespace MeShaon\RequestAnalytics\Services;
+namespace JonMierke\RequestAnalytics\Services;
 
 use GeoIp2\Database\Reader;
 use GeoIp2\Exception\AddressNotFoundException;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
-use MeShaon\RequestAnalytics\Exceptions\GeolocationProviderException;
-use MeShaon\RequestAnalytics\Exceptions\MaxMindConfigurationException;
-use MeShaon\RequestAnalytics\Exceptions\MaxMindDependencyException;
+use JonMierke\RequestAnalytics\Exceptions\GeolocationProviderException;
+use JonMierke\RequestAnalytics\Exceptions\MaxMindConfigurationException;
+use JonMierke\RequestAnalytics\Exceptions\MaxMindDependencyException;
 
 class GeolocationService
 {

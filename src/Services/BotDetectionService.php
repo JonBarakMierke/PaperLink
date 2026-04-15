@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Services;
+namespace JonMierke\RequestAnalytics\Services;
 
-use MeShaon\RequestAnalytics\Exceptions\BotDetectionException;
+use JonMierke\RequestAnalytics\Exceptions\BotDetectionException;
 
 class BotDetectionService
 {

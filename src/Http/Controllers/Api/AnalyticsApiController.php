@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Http\Controllers\Api;
+namespace JonMierke\RequestAnalytics\Http\Controllers\Api;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Cache;
-use MeShaon\RequestAnalytics\Http\Requests\OverviewRequest;
-use MeShaon\RequestAnalytics\Http\Requests\PageViewsRequest;
-use MeShaon\RequestAnalytics\Http\Requests\VisitorsRequest;
-use MeShaon\RequestAnalytics\Services\AnalyticsService;
+use JonMierke\RequestAnalytics\Http\Requests\OverviewRequest;
+use JonMierke\RequestAnalytics\Http\Requests\PageViewsRequest;
+use JonMierke\RequestAnalytics\Http\Requests\VisitorsRequest;
+use JonMierke\RequestAnalytics\Services\AnalyticsService;
 
 class AnalyticsApiController extends BaseController
 {

@@ -1,18 +1,18 @@
 {
-    "name": "me-shaon/laravel-request-analytics",
+    "name": "jon-mierke/laravel-request-analytics",
     "description": "Simple request data analytics package for Laravel projects",
     "keywords": [
-        "me-shaon",
+        "jon-mierke",
         "laravel",
         "laravel-request-analytics"
     ],
-    "homepage": "https://github.com/me-shaon/laravel-request-analytics",
+    "homepage": "https://github.com/JonBarakMierke/laravel-request-analytics",
     "license": "MIT",
     "authors": [
         {
-            "name": "Ahmed shamim",
-            "email": "shaon.cse81@gmail.com",
-            "role": "Developer"
+            "name": "Jon Mierke",
+            "email": "jon@pubplus.net",
+            "role": "Developer - Forked Package"
         }
     ],
     "require": {
@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "MeShaon\\RequestAnalytics\\": "src/",
-            "MeShaon\\RequestAnalytics\\Database\\Factories\\": "database/factories/"
+            "JonMierke\\RequestAnalytics\\": "src/",
+            "JonMierke\\RequestAnalytics\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MeShaon\\RequestAnalytics\\Tests\\": "tests/",
+            "JonMierke\\RequestAnalytics\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -65,7 +65,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MeShaon\\RequestAnalytics\\RequestAnalyticsServiceProvider"
+                "JonMierke\\RequestAnalytics\\RequestAnalyticsServiceProvider"
             ]
         }
     },

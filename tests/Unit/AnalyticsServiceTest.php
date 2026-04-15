@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Tests\Unit;
+namespace JonMierke\RequestAnalytics\Tests\Unit;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use MeShaon\RequestAnalytics\Models\RequestAnalytics;
-use MeShaon\RequestAnalytics\Services\AnalyticsService;
-use MeShaon\RequestAnalytics\Tests\TestCase;
+use JonMierke\RequestAnalytics\Models\RequestAnalytics;
+use JonMierke\RequestAnalytics\Services\AnalyticsService;
+use JonMierke\RequestAnalytics\Tests\TestCase;
 use PHPUnit\Framework\Attributes\Test;
 
 class AnalyticsServiceTest extends TestCase

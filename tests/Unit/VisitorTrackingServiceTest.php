@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Tests\Unit;
+namespace JonMierke\RequestAnalytics\Tests\Unit;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
-use MeShaon\RequestAnalytics\Services\VisitorTrackingService;
-use MeShaon\RequestAnalytics\Tests\TestCase;
+use JonMierke\RequestAnalytics\Services\VisitorTrackingService;
+use JonMierke\RequestAnalytics\Tests\TestCase;
 use PHPUnit\Framework\Attributes\Test;
 
 class VisitorTrackingServiceTest extends TestCase

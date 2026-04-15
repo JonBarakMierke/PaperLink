@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\DTO;
+namespace JonMierke\RequestAnalytics\DTO;
 
 class RequestDataDTO
 {

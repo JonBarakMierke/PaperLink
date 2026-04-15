@@ -1,9 +1,9 @@
 <?php
 
-namespace MeShaon\RequestAnalytics\Database\Factories;
+namespace JonMierke\RequestAnalytics\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use MeShaon\RequestAnalytics\Models\RequestAnalytics;
+use JonMierke\RequestAnalytics\Models\RequestAnalytics;
 
 class RequestAnalyticsFactory extends Factory
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace MeShaon\RequestAnalytics;
+namespace JonMierke\RequestAnalytics;
 
 use Illuminate\Contracts\Http\Kernel;
-use MeShaon\RequestAnalytics\Http\Middleware\AnalyticsDashboardMiddleware;
-use MeShaon\RequestAnalytics\Http\Middleware\APIRequestCapture;
-use MeShaon\RequestAnalytics\Http\Middleware\WebRequestCapture;
+use JonMierke\RequestAnalytics\Http\Middleware\AnalyticsDashboardMiddleware;
+use JonMierke\RequestAnalytics\Http\Middleware\APIRequestCapture;
+use JonMierke\RequestAnalytics\Http\Middleware\WebRequestCapture;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;

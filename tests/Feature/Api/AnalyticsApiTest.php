@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Tests\Feature\Api;
+namespace JonMierke\RequestAnalytics\Tests\Feature\Api;
 
 use Illuminate\Support\Facades\Cache;
-use MeShaon\RequestAnalytics\Models\RequestAnalytics;
-use MeShaon\RequestAnalytics\Tests\Feature\BaseFeatureTestCase;
+use JonMierke\RequestAnalytics\Models\RequestAnalytics;
+use JonMierke\RequestAnalytics\Tests\Feature\BaseFeatureTestCase;
 use PHPUnit\Framework\Attributes\Test;
 
 class AnalyticsApiTest extends BaseFeatureTestCase

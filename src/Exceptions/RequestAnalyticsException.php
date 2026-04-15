@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MeShaon\RequestAnalytics\Exceptions;
+namespace JonMierke\RequestAnalytics\Exceptions;
 
 use Exception;
 

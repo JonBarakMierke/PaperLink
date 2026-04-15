@@ -1,12 +1,12 @@
 <?php
 
-namespace MeShaon\RequestAnalytics\Concern;
+namespace JonMierke\RequestAnalytics\Concern;
 
 use Illuminate\Http\Request;
-use MeShaon\RequestAnalytics\DTO\RequestDataDTO;
-use MeShaon\RequestAnalytics\Services\BotDetectionService;
-use MeShaon\RequestAnalytics\Services\GeolocationService;
-use MeShaon\RequestAnalytics\Services\VisitorTrackingService;
+use JonMierke\RequestAnalytics\DTO\RequestDataDTO;
+use JonMierke\RequestAnalytics\Services\BotDetectionService;
+use JonMierke\RequestAnalytics\Services\GeolocationService;
+use JonMierke\RequestAnalytics\Services\VisitorTrackingService;
 use Symfony\Component\HttpFoundation\IpUtils;
 use Symfony\Component\HttpFoundation\Response;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace MeShaon\RequestAnalytics\Models;
+namespace JonMierke\RequestAnalytics\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
