@@ -37,12 +37,6 @@ return new class extends Migration
                     ->constrained('paper_links')
                     ->nullOnDelete();
                 $table->timestamp('visited_at');
-
-                $table->index('paper_link_id');
-                $table->index('visited_at');
-                $table->index('visitor_id');
-                $table->index('session_id');
-                
                 $table->timestamps();
             });
         }
