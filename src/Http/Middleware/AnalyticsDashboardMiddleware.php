@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Http\Middleware;
+namespace JonMierke\PaperLink\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use JonMierke\RequestAnalytics\Contracts\CanAccessAnalyticsDashboard;
+use JonMierke\PaperLink\Contracts\CanAccessAnalyticsDashboard;
 
 class AnalyticsDashboardMiddleware
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace JonMierke\RequestAnalytics\Models;
+namespace JonMierke\PaperLink\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

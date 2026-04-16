@@ -22,6 +22,9 @@ return new class extends Migration
             $table->index(['browser', 'visited_at']);
             $table->index(['operating_system', 'visited_at']);
             $table->index(['country', 'visited_at']);
+            $table->index('paper_link_id');
+            $table->index('visitor_id');
+            $table->index(['paper_link_id', 'visited_at']);
         });
     }
 
@@ -41,6 +44,9 @@ return new class extends Migration
             $table->dropIndex(['browser', 'visited_at']);
             $table->dropIndex(['operating_system', 'visited_at']);
             $table->dropIndex(['country', 'visited_at']);
+            $table->dropIndex(['paper_link_id']);
+            $table->dropIndex(['visitor_id']);
+            $table->dropIndex(['paper_link_id', 'visited_at']);
         });
     }
 };

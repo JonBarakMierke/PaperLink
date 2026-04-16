@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Http\Middleware;
+namespace JonMierke\PaperLink\Http\Middleware;
 
 use Closure;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use JonMierke\RequestAnalytics\Concern\CaptureRequest;
-use JonMierke\RequestAnalytics\DTO\RequestDataDTO;
-use JonMierke\RequestAnalytics\Jobs\ProcessData;
+use JonMierke\PaperLink\Concerns\CaptureRequest;
+use JonMierke\PaperLink\DTO\RequestDataDTO;
+use JonMierke\PaperLink\Jobs\ProcessData;
 use Symfony\Component\HttpFoundation\Response;
 
 class APIRequestCapture

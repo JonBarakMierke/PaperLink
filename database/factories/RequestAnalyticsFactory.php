@@ -1,9 +1,9 @@
 <?php
 
-namespace JonMierke\RequestAnalytics\Database\Factories;
+namespace JonMierke\PaperLink\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use JonMierke\RequestAnalytics\Models\RequestAnalytics;
+use JonMierke\PaperLink\Models\PaperLink;
 
 class RequestAnalyticsFactory extends Factory
 {

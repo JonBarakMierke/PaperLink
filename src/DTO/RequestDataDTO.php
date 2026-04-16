@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\DTO;
+namespace JonMierke\PaperLink\DTO;
 
 class RequestDataDTO
 {
@@ -21,7 +21,6 @@ class RequestDataDTO
         public string $requestCategory,
         public string $sessionId = '',
         public string $visitorId = '',
-        public ?int $customerId = null,
         public ?int $paperlinkId = null,
     ) {}
 }

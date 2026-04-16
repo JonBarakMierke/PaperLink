@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Exceptions;
+namespace JonMierke\PaperLink\Exceptions;
 
 /**
  * Exception thrown when a geolocation provider (API) fails

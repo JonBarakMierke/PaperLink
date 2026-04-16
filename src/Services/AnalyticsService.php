@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Services;
+namespace JonMierke\PaperLink\Services;
 
 use Carbon\CarbonInterval;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
-use JonMierke\RequestAnalytics\Models\RequestAnalytics;
+use JonMierke\PaperLink\Models\PaperLink;
 
 class AnalyticsService
 {

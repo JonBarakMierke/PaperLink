@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Http\Requests;
+namespace JonMierke\PaperLink\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

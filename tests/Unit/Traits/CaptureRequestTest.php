@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Tests\Unit\Traits;
+namespace JonMierke\PaperLink\Tests\Unit\Traits;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use JonMierke\RequestAnalytics\Concern\CaptureRequest;
-use JonMierke\RequestAnalytics\DTO\RequestDataDTO;
-use JonMierke\RequestAnalytics\Tests\TestCase;
+use JonMierke\PaperLink\Concerns\CaptureRequest;
+use JonMierke\PaperLink\DTO\RequestDataDTO;
+use JonMierke\PaperLink\Tests\TestCase;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 

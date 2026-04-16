@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Http\Controllers;
+namespace JonMierke\PaperLink\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
-use JonMierke\RequestAnalytics\Services\DashboardAnalyticsService;
+use JonMierke\PaperLink\Services\DashboardAnalyticsService;
 
 class RequestAnalyticsController extends BaseController
 {
