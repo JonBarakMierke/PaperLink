@@ -4,9 +4,9 @@
 
 ## Overview
 
-PaperLink Handles:
+### PaperLink Handles:
 
-** Core Services
+#### Core Services
 - Link generation
 - Redirection handling
 - Analytics capture
@@ -14,7 +14,7 @@ PaperLink Handles:
 - GEO Data
 - UTM Parsing
 
-** Core Models
+#### Core Models
 - PaperLink
 - Campaign
 - AnalyticsRecord
@@ -57,8 +57,6 @@ This interactive installer will:
 - Provide next steps and dashboard access information
 
 After running the installer, your analytics dashboard will be ready at `/analytics`!
-
-[![Package Installation Guideline Video Banner](https://github.com/me-shaon/laravel-request-analytics/blob/main/package-installation-guideline-video-banner.webp?raw=true)](https://youtu.be/m3m6t2v0YR8)
 
 ### Manual Setup (Advanced)
 

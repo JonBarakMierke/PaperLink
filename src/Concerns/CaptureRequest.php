@@ -1,6 +1,6 @@
 <?php
 
-namespace JonMierke\PaperLink\Concern;
+namespace JonMierke\PaperLink\Concerns;
 
 use Illuminate\Http\Request;
 use JonMierke\PaperLink\DTO\RequestDataDTO;

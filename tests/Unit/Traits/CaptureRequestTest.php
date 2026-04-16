@@ -6,7 +6,7 @@ namespace JonMierke\PaperLink\Tests\Unit\Traits;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use JonMierke\PaperLink\Concern\CaptureRequest;
+use JonMierke\PaperLink\Concerns\CaptureRequest;
 use JonMierke\PaperLink\DTO\RequestDataDTO;
 use JonMierke\PaperLink\Tests\TestCase;
 use PHPUnit\Framework\Attributes\DataProvider;

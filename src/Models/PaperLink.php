@@ -8,18 +8,52 @@ use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 
-class PaperLink extends Model
+#[ObservedBy(PaperLinkObserver::class)]
+class PaperLink extends Model implements Auditable
 {
-    use HasFactory, MassPrunable;
+    use AuditingAuditable, LogsActivity, BelongsToCustomer;
 
-    public const UPDATED_AT = null;
+    protected $fillable = [
+        'campaign_id',
+        'slug',
+        'destination_url',
+        'title',
+        'is_active',
+    ];
 
-    public const CREATED_AT = null;
 
-    protected $guarded = ['id', 'created_at', 'updated_at'];
-
-    public function account()
+    public function linkables()
     {
-        return $this->morphTo();
+        return $this->morphedByMany(
+            '*',
+            'linkable',
+            'linkables'
+        );
     }
+
+    public function analytics()
+    {
+        return $this->hasMany(RequestAnalytics::class, 'paperlink_id');
+    }
+
+    public function humanAnalytics()
+    {
+        return $this->analytics()
+            ->where('request_category', 'web');
+    }
+
+    /**
+     * Activity Log
+     */
+    public function getActivitylogOptions(): LogOptions
+    {
+        return LogOptions::defaults()
+        ->logOnly(['slug', 'destination_url', 'is_active', 'title'])
+        ->dontLogIfAttributesChangedOnly(['title'])
+        ->useLogName('paper_link')
+        ->logOnlyDirty();
+    }
+
+    protected static $recordEvents = ['created', 'updated', 'deleted'];
 }
+

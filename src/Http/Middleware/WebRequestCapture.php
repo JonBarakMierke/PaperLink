@@ -8,7 +8,7 @@ use Closure;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use JonMierke\PaperLink\Concern\CaptureRequest;
+use JonMierke\PaperLink\Concerns\CaptureRequest;
 use JonMierke\PaperLink\DTO\RequestDataDTO;
 use JonMierke\PaperLink\Jobs\ProcessData;
 use Symfony\Component\HttpFoundation\Response;

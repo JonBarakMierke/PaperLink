@@ -21,7 +21,6 @@ class RequestDataDTO
         public string $requestCategory,
         public string $sessionId = '',
         public string $visitorId = '',
-        public ?int $customerId = null,
         public ?int $paperlinkId = null,
     ) {}
 }
