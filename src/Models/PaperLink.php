@@ -23,15 +23,6 @@ class PaperLink extends Model implements Auditable
         'is_active',
     ];
 
-    public function linkables()
-    {
-        return $this->morphedByMany(
-            '*',
-            'linkable',
-            'linkables'
-        );
-    }
-
     public function analytics()
     {
         return $this->hasMany(RequestAnalytics::class, 'paperlink_id');
