@@ -21,6 +21,8 @@ return new class extends Migration
 
             $table->string('title')->nullable();
             $table->boolean('is_active')->default(true);
+            $table->boolean('is_paid')->after('is_active')->default(false);
+            $table->date('paid_access_until')->after('is_active')->nullable();
 
             $table->timestamps();
         });
