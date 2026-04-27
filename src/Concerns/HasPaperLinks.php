@@ -7,7 +7,7 @@ use JonMierke\PaperLink\Models\PaperLink;
 
 trait HasPaperLinks
 {
-    public function links(): MorphToMany
+    public function paperLinks(): MorphToMany
     {
         return $this->morphToMany(
             PaperLink::class,
