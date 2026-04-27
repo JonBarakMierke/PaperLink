@@ -28,6 +28,11 @@ class PaperLink extends Model implements Auditable
         return $this->hasMany(RequestAnalytics::class, 'paperlink_id');
     }
 
+    public function linkables()
+    {
+        return $this->hasMany(Linkable::class);
+    }
+
     public function humanAnalytics()
     {
         return $this->analytics()
@@ -47,4 +52,21 @@ class PaperLink extends Model implements Auditable
     }
 
     protected static $recordEvents = ['created', 'updated', 'deleted'];
+
+    /**
+     * Helper methods
+     */
+    public function syncLinkables(string $type, array $ids): void
+    {
+        $this->linkables()
+            ->where('linkable_type', $type)
+            ->delete();
+
+        foreach ($ids as $id) {
+            $this->linkables()->create([
+                'linkable_type' => $type,
+                'linkable_id' => $id,
+            ]);
+        }
+    }
 }
