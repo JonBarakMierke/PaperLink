@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace JonMierke\PaperLink\Tests\Feature\Api;
 
 use Illuminate\Support\Facades\Cache;
-use JonMierke\PaperLink\Models\PaperLink;
 use JonMierke\PaperLink\Tests\Feature\BaseFeatureTestCase;
 use PHPUnit\Framework\Attributes\Test;
 

@@ -9,9 +9,8 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use JonMierke\PaperLink\DTO\RequestDataDTO;
-use JonMierke\PaperLink\Services\PaperLinkService;
 use Illuminate\Support\Facades\Log;
+use JonMierke\PaperLink\DTO\RequestDataDTO;
 
 class ProcessData implements ShouldQueue
 {
@@ -28,7 +27,7 @@ class ProcessData implements ShouldQueue
             'payload' => $this->requestDataDTO,
             'Filepath' => __FILE__,
         ]);
-        
+
         $requestAnalyticsService->store($this->requestDataDTO);
     }
 }
