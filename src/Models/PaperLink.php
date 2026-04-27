@@ -7,11 +7,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
+use JonMierke\PaperLink\Observers\PaperLinkObserver;
+use OwenIt\Auditing\Contracts\Auditable;
+use Spatie\Activitylog\LogOptions;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 #[ObservedBy(PaperLinkObserver::class)]
 class PaperLink extends Model implements Auditable
 {
-    use AuditingAuditable, LogsActivity, BelongsToCustomer;
+    use AuditingAuditable, LogsActivity;
 
     protected $fillable = [
         'campaign_id',
