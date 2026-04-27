@@ -3,7 +3,6 @@
 namespace JonMierke\PaperLink\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use JonMierke\PaperLink\Models\PaperLink;
 
 class RequestAnalyticsFactory extends Factory
 {

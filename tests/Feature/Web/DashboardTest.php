@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace JonMierke\PaperLink\Tests\Feature\Web;
 
-use JonMierke\PaperLink\Models\PaperLink;
 use JonMierke\PaperLink\Tests\Feature\BaseFeatureTestCase;
 use PHPUnit\Framework\Attributes\Test;
 
