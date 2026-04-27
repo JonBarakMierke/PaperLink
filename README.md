@@ -43,10 +43,10 @@ Get up and running in just two commands:
 
 ```bash
 # Install the package
-composer require me-shaon/laravel-request-analytics
+composer require jon-mierke/paperlink:dev-main
 
 # Run the interactive installer
-php artisan request-analytics:install
+php artisan paperlink:install
 ```
 
 This interactive installer will:

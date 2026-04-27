@@ -20,7 +20,7 @@ class PaperLinkServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasRoutes(['web', 'api'])
             ->hasAssets()
-            ->hasMigrations(['create_paper_links_table', 'create_request_analytics_table', 'add_indexes_to_request_analytics_table'])
+            ->hasMigrations(['create_paper_links_table', 'create_request_analytics_table', 'create_linkables_table', 'add_indexes_to_request_analytics_table'])
             ->hasInstallCommand(function (InstallCommand $command): void {
                 $command
                     ->startWith(function (InstallCommand $command): void {
