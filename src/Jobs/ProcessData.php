@@ -10,7 +10,6 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use JonMierke\PaperLink\DTO\RequestDataDTO;
-use JonMierke\PaperLink\Services\PaperLinkService;
 
 class ProcessData implements ShouldQueue
 {
