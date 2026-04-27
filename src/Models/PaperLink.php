@@ -25,7 +25,7 @@ class PaperLink extends Model implements Auditable
 
     public function analytics()
     {
-        return $this->hasMany(RequestAnalytics::class, 'paperlink_id');
+        return $this->hasMany(RequestAnalytics::class, 'paper_link_id');
     }
 
     public function linkables()

@@ -2,6 +2,7 @@
 
 namespace JonMierke\PaperLink\Concerns;
 
+use Closure;
 use Illuminate\Http\Request;
 use JonMierke\PaperLink\DTO\RequestDataDTO;
 use JonMierke\PaperLink\Services\BotDetectionService;
@@ -12,8 +13,11 @@ use Symfony\Component\HttpFoundation\Response;
 
 trait CaptureRequest
 {
-    public function capture(Request $request, Response $response, string $requestCategory): ?RequestDataDTO
+    public function capture(Request $request, Response $response, string $requestCategory, Closure $next): ?RequestDataDTO
     {
+        // Make sure response exists even if request is a redirect
+        $response = $next($request);
+
         if ($this->shouldIgnore($request->path())) {
             return null;
         }
@@ -43,6 +47,7 @@ trait CaptureRequest
         $browserInfo = $this->parseUserAgent($request->header('User-Agent'));
         $ipAddress = $this->getIpAddress($request);
         $referrer = $request->header('referer', '');
+        $paperlinkId = null;
 
         // Get country from geolocation or CloudFlare header
         $country = '';
@@ -81,8 +86,7 @@ trait CaptureRequest
             $requestCategory,
             $sessionId,
             $visitorId,
-            $request->get('paperlink_id'),
-            $request->get('customer_id'),
+            $request->attributes->get('paper_link_id') ?? $request->get('paper_link_id'), // prefer attribute
         );
     }
 
