@@ -13,11 +13,8 @@ use Symfony\Component\HttpFoundation\Response;
 
 trait CaptureRequest
 {
-    public function capture(Request $request, Response $response, string $requestCategory, Closure $next): ?RequestDataDTO
+    public function capture(Request $request, Response $response, string $requestCategory): ?RequestDataDTO
     {
-        // Make sure response exists even if request is a redirect
-        $response = $next($request);
-
         if ($this->shouldIgnore($request->path())) {
             return null;
         }

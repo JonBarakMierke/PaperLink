@@ -33,7 +33,10 @@ class APIRequestCapture
                 }
             }
         } catch (Exception $e) {
-            Log::error($e->getMessage());
+            Log::error([
+                'Paperlink⚡' => __CLASS__,
+                'Error' => $e->getMessage(),
+            ]);
         }
     }
 }
