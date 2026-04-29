@@ -4,10 +4,7 @@ namespace JonMierke\PaperLink\Services;
 
 use Illuminate\Support\Facades\Auth;
 use JonMierke\PaperLink\DTO\RequestDataDTO;
-use JonMierke\PaperLink\Exceptions\PaperLinkStorageException;
-use JonMierke\PaperLink\Models\PaperLink;
 use JonMierke\PaperLink\Models\RequestAnalytics;
-
 
 class RequestAnalyticsService
 {
