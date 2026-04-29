@@ -4,6 +4,7 @@ namespace JonMierke\PaperLink\Http\Controllers;
 
 use Illuminate\Http\Request;
 use JonMierke\PaperLink\Models\PaperLink;
+use Illuminate\Routing\Controller as BaseController;
 use Symfony\Component\HttpFoundation\Response;
 
 class PaperLinkRedirectController extends Controller
