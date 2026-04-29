@@ -2,7 +2,6 @@
 
 namespace JonMierke\PaperLink\Concerns;
 
-use Closure;
 use Illuminate\Http\Request;
 use JonMierke\PaperLink\DTO\RequestDataDTO;
 use JonMierke\PaperLink\Services\BotDetectionService;

@@ -4,7 +4,6 @@ namespace JonMierke\PaperLink\Http\Controllers;
 
 use Illuminate\Http\Request;
 use JonMierke\PaperLink\Models\PaperLink;
-use Symfony\Component\HttpFoundation\Response;
 
 class PaperLinkRedirectController extends Controller
 {
@@ -14,7 +13,7 @@ class PaperLinkRedirectController extends Controller
             ->where('is_active', true)
             ->first();
 
-        if (!$paperLink) {
+        if (! $paperLink) {
             abort(404); // or custom "link not found" page
         }
 
