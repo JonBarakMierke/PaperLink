@@ -3,6 +3,7 @@
 namespace JonMierke\PaperLink\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller as BaseController;
 use JonMierke\PaperLink\Models\PaperLink;
 
 class PaperLinkRedirectController extends BaseController
