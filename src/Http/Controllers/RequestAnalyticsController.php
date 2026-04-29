@@ -12,6 +12,7 @@ class RequestAnalyticsController extends BaseController
 {
     public function __construct(protected DashboardAnalyticsService $dashboardService) {}
 
+    
     public function show(Request $request)
     {
         $params = [];
