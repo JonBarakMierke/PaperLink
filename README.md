@@ -4,9 +4,9 @@
 
 ## Overview
 
-PaperLink Handles:
+### PaperLink Handles:
 
-** Core Services
+#### Core Services
 - Link generation
 - Redirection handling
 - Analytics capture
@@ -14,7 +14,7 @@ PaperLink Handles:
 - GEO Data
 - UTM Parsing
 
-** Core Models
+#### Core Models
 - PaperLink
 - Campaign
 - AnalyticsRecord
@@ -43,10 +43,10 @@ Get up and running in just two commands:
 
 ```bash
 # Install the package
-composer require me-shaon/laravel-request-analytics
+composer require jon-mierke/paperlink:dev-main
 
 # Run the interactive installer
-php artisan request-analytics:install
+php artisan paperlink:install
 ```
 
 This interactive installer will:
@@ -57,8 +57,6 @@ This interactive installer will:
 - Provide next steps and dashboard access information
 
 After running the installer, your analytics dashboard will be ready at `/analytics`!
-
-[![Package Installation Guideline Video Banner](https://github.com/me-shaon/laravel-request-analytics/blob/main/package-installation-guideline-video-banner.webp?raw=true)](https://youtu.be/m3m6t2v0YR8)
 
 ### Manual Setup (Advanced)
 
@@ -189,7 +187,7 @@ php artisan vendor:publish --tag="request-analytics-assets"
 php artisan vendor:publish --tag="request-analytics-views"
 
 # Or publish everything at once
-php artisan vendor:publish --provider="JonMierke\RequestAnalytics\RequestAnalyticsServiceProvider"
+php artisan vendor:publish --provider="JonMierke\PaperLink\PaperLinkServiceProvider"
 ```
 
 ### Automated Data Pruning
@@ -203,7 +201,7 @@ Add to `routes/console.php`:
 use Illuminate\Support\Facades\Schedule;
 
 Schedule::command('model:prune', [
-    '--model' => 'JonMierke\RequestAnalytics\Models\RequestAnalytics',
+    '--model' => 'JonMierke\PaperLink\Models\PaperLink',
 ])->monthly();
 ```
 
@@ -213,7 +211,7 @@ use Illuminate\Console\Scheduling\Schedule;
 
 ->withSchedule(function (Schedule $schedule) {
     $schedule->command('model:prune', [
-        '--model' => 'JonMierke\RequestAnalytics\Models\RequestAnalytics',
+        '--model' => 'JonMierke\PaperLink\Models\PaperLink',
     ])->monthly();
 })
 ```
@@ -225,7 +223,7 @@ Add to `app/Console/Kernel.php`:
 protected function schedule(Schedule $schedule): void
 {
     $schedule->command('model:prune', [
-        '--model' => 'JonMierke\RequestAnalytics\Models\RequestAnalytics',
+        '--model' => 'JonMierke\PaperLink\Models\PaperLink',
     ])->monthly();
 }
 ```
@@ -276,7 +274,7 @@ php artisan request-analytics:install
 php artisan list | grep analytics
 
 # Clear old analytics data (if pruning is enabled)
-php artisan model:prune --model="JonMierke\RequestAnalytics\Models\RequestAnalytics"
+php artisan model:prune --model="JonMierke\PaperLink\Models\PaperLink"
 ```
 
 ## Configuration Options
@@ -379,7 +377,7 @@ Implement the `CanAccessAnalyticsDashboard` interface in your User model to cont
 namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use JonMierke\RequestAnalytics\Contracts\CanAccessAnalyticsDashboard;
+use JonMierke\PaperLink\Contracts\CanAccessAnalyticsDashboard;
 
 class User extends Authenticatable implements CanAccessAnalyticsDashboard
 {

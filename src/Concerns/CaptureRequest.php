@@ -1,12 +1,12 @@
 <?php
 
-namespace JonMierke\RequestAnalytics\Concern;
+namespace JonMierke\PaperLink\Concerns;
 
 use Illuminate\Http\Request;
-use JonMierke\RequestAnalytics\DTO\RequestDataDTO;
-use JonMierke\RequestAnalytics\Services\BotDetectionService;
-use JonMierke\RequestAnalytics\Services\GeolocationService;
-use JonMierke\RequestAnalytics\Services\VisitorTrackingService;
+use JonMierke\PaperLink\DTO\RequestDataDTO;
+use JonMierke\PaperLink\Services\BotDetectionService;
+use JonMierke\PaperLink\Services\GeolocationService;
+use JonMierke\PaperLink\Services\VisitorTrackingService;
 use Symfony\Component\HttpFoundation\IpUtils;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -43,6 +43,7 @@ trait CaptureRequest
         $browserInfo = $this->parseUserAgent($request->header('User-Agent'));
         $ipAddress = $this->getIpAddress($request);
         $referrer = $request->header('referer', '');
+        $paperlinkId = null;
 
         // Get country from geolocation or CloudFlare header
         $country = '';
@@ -81,8 +82,7 @@ trait CaptureRequest
             $requestCategory,
             $sessionId,
             $visitorId,
-            $request->get('paperlink_id'),
-            $request->get('customer_id'),
+            $request->attributes->get('paper_link_id') ?? $request->get('paper_link_id'), // prefer attribute
         );
     }
 

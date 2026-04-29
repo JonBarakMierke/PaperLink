@@ -10,7 +10,7 @@ return new class extends Migration
     {
         $tableName = config('request-analytics.database.table', 'request_analytics');
         $connection = config('request-analytics.database.connection');
-        
+
         Schema::connection($connection)->table($tableName, function (Blueprint $table) {
             $table->index('visited_at');
             $table->index('session_id');
@@ -22,6 +22,9 @@ return new class extends Migration
             $table->index(['browser', 'visited_at']);
             $table->index(['operating_system', 'visited_at']);
             $table->index(['country', 'visited_at']);
+            $table->index('paper_link_id');
+            $table->index('visitor_id');
+            $table->index(['paper_link_id', 'visited_at']);
         });
     }
 
@@ -29,7 +32,7 @@ return new class extends Migration
     {
         $tableName = config('request-analytics.database.table', 'request_analytics');
         $connection = config('request-analytics.database.connection');
-        
+
         Schema::connection($connection)->table($tableName, function (Blueprint $table) {
             $table->dropIndex(['visited_at']);
             $table->dropIndex(['session_id']);
@@ -41,6 +44,9 @@ return new class extends Migration
             $table->dropIndex(['browser', 'visited_at']);
             $table->dropIndex(['operating_system', 'visited_at']);
             $table->dropIndex(['country', 'visited_at']);
+            $table->dropIndex(['paper_link_id']);
+            $table->dropIndex(['visitor_id']);
+            $table->dropIndex(['paper_link_id', 'visited_at']);
         });
     }
 };

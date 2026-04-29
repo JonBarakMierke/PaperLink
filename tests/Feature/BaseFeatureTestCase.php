@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Tests\Feature;
+namespace JonMierke\PaperLink\Tests\Feature;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Cache;
-use JonMierke\RequestAnalytics\Contracts\CanAccessAnalyticsDashboard;
-use JonMierke\RequestAnalytics\Tests\TestCase;
+use JonMierke\PaperLink\Contracts\CanAccessAnalyticsDashboard;
+use JonMierke\PaperLink\Tests\TestCase;
 use Mockery;
 
 class BaseFeatureTestCase extends TestCase

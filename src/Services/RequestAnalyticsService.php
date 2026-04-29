@@ -1,11 +1,9 @@
 <?php
 
-namespace JonMierke\RequestAnalytics\Services;
+namespace JonMierke\PaperLink\Services;
 
 use Illuminate\Support\Facades\Auth;
-use JonMierke\RequestAnalytics\DTO\RequestDataDTO;
-use JonMierke\RequestAnalytics\Exceptions\RequestAnalyticsStorageException;
-use JonMierke\RequestAnalytics\Models\RequestAnalytics;
+use JonMierke\PaperLink\DTO\RequestDataDTO;
 
 class RequestAnalyticsService
 {
@@ -31,8 +29,7 @@ class RequestAnalyticsService
             'request_category' => $requestDataDTO->requestCategory,
             'response_time' => round($requestDataDTO->responseTime * 1000), // Convert to milliseconds
             'visited_at' => now(),
-            'paperlink_id' => $requestDataDTO->paperlinkId,
-            'customer_id'  => $requestDataDTO->customerId,
+            'paper_link_id' => $requestDataDTO->paperlinkId,
         ];
 
         try {

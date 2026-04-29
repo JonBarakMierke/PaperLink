@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Tests\Unit;
+namespace JonMierke\PaperLink\Tests\Unit;
 
-use JonMierke\RequestAnalytics\Exceptions\BotDetectionException;
-use JonMierke\RequestAnalytics\Services\BotDetectionService;
-use JonMierke\RequestAnalytics\Tests\TestCase;
+use JonMierke\PaperLink\Exceptions\BotDetectionException;
+use JonMierke\PaperLink\Services\BotDetectionService;
+use JonMierke\PaperLink\Tests\TestCase;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 

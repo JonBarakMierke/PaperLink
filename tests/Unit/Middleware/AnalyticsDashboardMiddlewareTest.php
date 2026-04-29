@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Tests\Unit\Middleware;
+namespace JonMierke\PaperLink\Tests\Unit\Middleware;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use JonMierke\RequestAnalytics\Contracts\CanAccessAnalyticsDashboard;
-use JonMierke\RequestAnalytics\Http\Middleware\AnalyticsDashboardMiddleware;
-use JonMierke\RequestAnalytics\Tests\TestCase;
+use JonMierke\PaperLink\Contracts\CanAccessAnalyticsDashboard;
+use JonMierke\PaperLink\Http\Middleware\AnalyticsDashboardMiddleware;
+use JonMierke\PaperLink\Tests\TestCase;
 use Mockery;
 use PHPUnit\Framework\Attributes\Test;
 use Symfony\Component\HttpKernel\Exception\HttpException;

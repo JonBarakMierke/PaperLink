@@ -2,11 +2,10 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Tests\Feature\Api;
+namespace JonMierke\PaperLink\Tests\Feature\Api;
 
 use Illuminate\Support\Facades\Cache;
-use JonMierke\RequestAnalytics\Models\RequestAnalytics;
-use JonMierke\RequestAnalytics\Tests\Feature\BaseFeatureTestCase;
+use JonMierke\PaperLink\Tests\Feature\BaseFeatureTestCase;
 use PHPUnit\Framework\Attributes\Test;
 
 class AnalyticsApiTest extends BaseFeatureTestCase

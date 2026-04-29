@@ -1,30 +1,29 @@
 <?php
 
-namespace JonMierke\RequestAnalytics;
+namespace JonMierke\PaperLink;
 
 use Illuminate\Contracts\Http\Kernel;
-use JonMierke\RequestAnalytics\Http\Middleware\AnalyticsDashboardMiddleware;
-use JonMierke\RequestAnalytics\Http\Middleware\APIRequestCapture;
-use JonMierke\RequestAnalytics\Http\Middleware\WebRequestCapture;
+use JonMierke\PaperLink\Http\Middleware\AnalyticsDashboardMiddleware;
+use JonMierke\PaperLink\Http\Middleware\APIRequestCapture;
+use JonMierke\PaperLink\Http\Middleware\WebRequestCapture;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class RequestAnalyticsServiceProvider extends PackageServiceProvider
+class PaperLinkServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
         $package
-            ->name('laravel-request-analytics')
+            ->name('paperlink')
             ->hasConfigFile()
-            ->hasViews()
             ->hasRoutes(['web', 'api'])
             ->hasAssets()
-            ->hasMigrations(['create_request_analytics_table', 'add_indexes_to_request_analytics_table', 'add_to_request_analytics_table'])
+            ->hasMigrations(['create_paper_links_table', 'create_request_analytics_table', 'create_linkables_table', 'add_indexes_to_request_analytics_table'])
             ->hasInstallCommand(function (InstallCommand $command): void {
                 $command
                     ->startWith(function (InstallCommand $command): void {
-                        $command->info('Installing Laravel Request Analytics...');
+                        $command->info('Installing Laravel PaperLink...');
                         $command->info('This package will help you track and analyze your application requests.');
                     })
                     ->publishConfigFile()
@@ -32,7 +31,7 @@ class RequestAnalyticsServiceProvider extends PackageServiceProvider
                     ->publishAssets()
                     ->askToRunMigrations()
                     ->endWith(function (InstallCommand $command): void {
-                        $command->info('Laravel Request Analytics has been installed successfully!');
+                        $command->info('Laravel PaperLink has been installed successfully!');
                         $command->info('You can now visit /analytics to view your dashboard.');
                         $command->info('Check the documentation for configuration options.');
                     });
@@ -54,18 +53,18 @@ class RequestAnalyticsServiceProvider extends PackageServiceProvider
         /* @var \Illuminate\Routing\Router */
         $router = $this->app->make('router');
 
-        $router->aliasMiddleware('request-analytics.web', WebRequestCapture::class);
-        $router->aliasMiddleware('request-analytics.api', APIRequestCapture::class);
-        $router->aliasMiddleware('request-analytics.access', AnalyticsDashboardMiddleware::class);
+        $router->aliasMiddleware('paperlink.web', WebRequestCapture::class);
+        $router->aliasMiddleware('paperlink.api', APIRequestCapture::class);
+        $router->aliasMiddleware('paperlink.access', AnalyticsDashboardMiddleware::class);
     }
 
     private function pushMiddlewareToPipeline(): void
     {
-        if (config('request-analytics.capture.web')) {
+        if (config('paperlink.capture.web')) {
             $this->app[Kernel::class]->appendMiddlewareToGroup('web', WebRequestCapture::class);
         }
 
-        if (config('request-analytics.capture.api')) {
+        if (config('paperlink.capture.api')) {
             $this->app[Kernel::class]->appendMiddlewareToGroup('api', APIRequestCapture::class);
         }
     }

@@ -1,15 +1,15 @@
 <?php
 
-namespace JonMierke\RequestAnalytics\Services;
+namespace JonMierke\PaperLink\Services;
 
 use GeoIp2\Database\Reader;
 use GeoIp2\Exception\AddressNotFoundException;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
-use JonMierke\RequestAnalytics\Exceptions\GeolocationProviderException;
-use JonMierke\RequestAnalytics\Exceptions\MaxMindConfigurationException;
-use JonMierke\RequestAnalytics\Exceptions\MaxMindDependencyException;
+use JonMierke\PaperLink\Exceptions\GeolocationProviderException;
+use JonMierke\PaperLink\Exceptions\MaxMindConfigurationException;
+use JonMierke\PaperLink\Exceptions\MaxMindDependencyException;
 
 class GeolocationService
 {

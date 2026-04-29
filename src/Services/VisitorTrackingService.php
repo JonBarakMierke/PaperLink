@@ -1,6 +1,6 @@
 <?php
 
-namespace JonMierke\RequestAnalytics\Services;
+namespace JonMierke\PaperLink\Services;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;

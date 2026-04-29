@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Contracts;
+namespace JonMierke\PaperLink\Contracts;
 
 interface CanAccessAnalyticsDashboard
 {

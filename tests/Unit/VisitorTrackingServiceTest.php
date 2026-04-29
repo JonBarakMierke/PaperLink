@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Tests\Unit;
+namespace JonMierke\PaperLink\Tests\Unit;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
-use JonMierke\RequestAnalytics\Services\VisitorTrackingService;
-use JonMierke\RequestAnalytics\Tests\TestCase;
+use JonMierke\PaperLink\Services\VisitorTrackingService;
+use JonMierke\PaperLink\Tests\TestCase;
 use PHPUnit\Framework\Attributes\Test;
 
 class VisitorTrackingServiceTest extends TestCase

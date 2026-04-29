@@ -2,15 +2,16 @@
 
 declare(strict_types=1);
 
-namespace JonMierke\RequestAnalytics\Jobs;
+namespace JonMierke\PaperLink\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use JonMierke\RequestAnalytics\DTO\RequestDataDTO;
-use JonMierke\RequestAnalytics\Services\RequestAnalyticsService;
+use Illuminate\Support\Facades\Log;
+use JonMierke\PaperLink\DTO\RequestDataDTO;
+use JonMierke\PaperLink\Services\RequestAnalyticsService;
 
 class ProcessData implements ShouldQueue
 {
@@ -23,6 +24,10 @@ class ProcessData implements ShouldQueue
 
     public function handle(RequestAnalyticsService $requestAnalyticsService): void
     {
+        Log::debug('PaperLink⚡ - ProcessData JOB RAN', [
+            'Filepath' => __FILE__,
+        ]);
+
         $requestAnalyticsService->store($this->requestDataDTO);
     }
 }
