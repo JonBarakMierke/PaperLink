@@ -17,7 +17,6 @@ class PaperLinkServiceProvider extends PackageServiceProvider
         $package
             ->name('paperlink')
             ->hasConfigFile()
-            ->hasViews()
             ->hasRoutes(['web', 'api'])
             ->hasAssets()
             ->hasMigrations(['create_paper_links_table', 'create_request_analytics_table', 'create_linkables_table', 'add_indexes_to_request_analytics_table'])

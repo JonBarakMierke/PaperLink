@@ -8,7 +8,6 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Cache;
 use JonMierke\PaperLink\Http\Requests\OverviewRequest;
-use JonMierke\PaperLink\Http\Requests\PageViewsRequest;
 use JonMierke\PaperLink\Http\Requests\VisitorsRequest;
 use JonMierke\PaperLink\Services\AnalyticsService;
 
@@ -38,18 +37,6 @@ class AnalyticsApiController extends BaseController
 
         return response()->json([
             'data' => $visitors,
-        ]);
-    }
-
-    public function pageViews(PageViewsRequest $request): JsonResponse
-    {
-        $params = $request->validated();
-        $perPage = (int) $request->input('per_page', 50);
-
-        $pageViews = $this->analyticsService->getPageViews($params, $perPage);
-
-        return response()->json([
-            'data' => $pageViews,
         ]);
     }
 }
