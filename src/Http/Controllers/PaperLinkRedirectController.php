@@ -5,7 +5,7 @@ namespace JonMierke\PaperLink\Http\Controllers;
 use Illuminate\Http\Request;
 use JonMierke\PaperLink\Models\PaperLink;
 
-class PaperLinkRedirectController extends Controller
+class PaperLinkRedirectController extends BaseController
 {
     public function redirect(Request $request, string $slug)
     {
