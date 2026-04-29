@@ -8,7 +8,6 @@ use Carbon\CarbonInterval;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
-use JonMierke\PaperLink\Models\PaperLink;
 
 class AnalyticsService
 {
