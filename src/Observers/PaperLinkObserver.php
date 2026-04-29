@@ -2,8 +2,8 @@
 
 namespace JonMierke\PaperLink\Observers;
 
-use JonMierke\PaperLink\Models\PaperLink;
 use Illuminate\Support\Facades\Cache;
+use JonMierke\PaperLink\Models\PaperLink;
 
 class PaperLinkObserver
 {
